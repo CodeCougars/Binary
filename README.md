@@ -1,0 +1,4 @@
+Binary
+======
+
+Binary Class
