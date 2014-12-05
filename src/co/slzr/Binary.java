@@ -1,5 +1,8 @@
 package co.slzr;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * Created by AlexanderSelzer1 on 26.11.14.
  */
@@ -8,6 +11,10 @@ public class Binary {
     private int[] bits = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
     Binary(String input) {
+        if (!input.matches("[0|1]+")) {
+            throw new Error("Invalid input");
+        }
+        
         for (int i = (input.length() - 1), j = (bits.length - 1); i >= 0; i--, j--) {
             char bit = input.charAt(i);
 
