@@ -35,7 +35,6 @@ public class Binary
  
     Binary(String biInput) {
         binary = new int[biInput.length()];
-        if (biInput.length() <= binary.length) {
             for (int l = (biInput.length() - 1 ), j = (binary.length - 1); l >= 0; l--, j--) {
                 char bit = biInput.charAt(l);
     
@@ -47,10 +46,6 @@ public class Binary
                     binary[j] = 1;
                 }
             }
-        }
-        else {
-            throw new Error("Can not be longer than 32");
-        }
     }
  
     public String showBinary() {
