@@ -8,35 +8,7 @@ import java.util.regex.Pattern;
  */
 
 public class Binary {
-    private int[] bits = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-
-    Binary(String input) {
-        if (!input.matches("[0|1]+")) {
-            throw new Error("Invalid input");
-        }
-
-        if (input.length() > bits.length) {
-            throw new Error("Input can not be larger than " + bits.length);
-        }
-
-        for (int i = (input.length() - 1), j = (bits.length - 1); i >= 0; i--, j--) {
-            char bit = input.charAt(i);
-
-            if (bit == '0') {
-                bits[j] = 0;
-            }
-            else if (bit == '1') {
-                bits[j] = 1;
-            }
-        }
-    }
-
-    Binary(int input) {
-        for (int i = (bits.length - 1); i >= 0; i--) {
-            bits[i] = input % 2;
-            input = input / 2;
-        }
-    }
+    public Integer[] bits;
 
     public String toString() {
         String output = "";
@@ -58,5 +30,11 @@ public class Binary {
         }
 
         return output;
+    }
+
+    public void zeroBits() {
+        for (int i = 0; i < bits.length; i++) {
+            bits[i] = 0;
+        }
     }
 }
