@@ -14,7 +14,11 @@ public class Binary {
         if (!input.matches("[0|1]+")) {
             throw new Error("Invalid input");
         }
-        
+
+        if (input.length() > bits.length) {
+            throw new Error("Input can not be larger than " + bits.length);
+        }
+
         for (int i = (input.length() - 1), j = (bits.length - 1); i >= 0; i--, j--) {
             char bit = input.charAt(i);
 
