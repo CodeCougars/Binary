@@ -1,3 +1,5 @@
+package io.github.codecougars.ornirus;
+
 public class Binary
 {
     private int[] binary; //= {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};

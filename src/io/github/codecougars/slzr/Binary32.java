@@ -1,14 +1,13 @@
-package co.slzr;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+package io.github.codecougars.slzr;
 
 /**
  * Created by AlexanderSelzer1 on 26.11.14.
  */
 
+import io.github.codecougars.slzr.Binary;
+
 public class Binary32 extends Binary {
-    Binary32(String input) {
+    public Binary32(String input) {
         bits = new Integer[32];
         zeroBits();
 
@@ -32,7 +31,7 @@ public class Binary32 extends Binary {
         }
     }
 
-    Binary32(int input) {
+    public Binary32(int input) {
         bits = new Integer[32];
         zeroBits();
 

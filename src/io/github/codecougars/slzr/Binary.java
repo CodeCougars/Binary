@@ -1,4 +1,4 @@
-package co.slzr;
+package io.github.codecougars.slzr;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

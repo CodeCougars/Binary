@@ -1,5 +1,6 @@
-package co.slzr;
+package io.github.codecougars.slzr;
 
+import io.github.codecougars.slzr.Binary;
 import java.util.ArrayList;
 
 /**
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 public class DynamicBinary extends Binary {
     /* `bits` has to be set or errors happen */
 
-    DynamicBinary(String input) {
+    public DynamicBinary(String input) {
         if (!input.matches("[0|1]+")) {
             throw new Error("Invalid input");
         }
@@ -28,7 +29,7 @@ public class DynamicBinary extends Binary {
         }
     }
 
-    DynamicBinary(int input) {
+    public DynamicBinary(int input) {
         int mult = 0;
         while ((Math.pow(2, mult) <= input)) {
             mult++;

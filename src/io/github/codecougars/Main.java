@@ -1,4 +1,7 @@
-package co.slzr;
+package io.github.codecougars;
+
+
+import io.github.codecougars.slzr.*;
 
 public class Main {
 
