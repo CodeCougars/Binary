@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
  * Created by AlexanderSelzer1 on 26.11.14.
  */
 
-public class Binary {
+public abstract class Binary {
     public Integer[] bits;
 
     public String toString() {
