@@ -161,7 +161,7 @@ public class BinGUIFrame extends JFrame {
 
             // Output was a Binary. Input becomes the binary.
             if (Binary.isValid(outputText))
-                input.setText(new DynamicBinary(outputText).toString());
+                input.setText(new CompactBinary(outputText).toString());
             // will trigger output refresh
 
             System.out.println(output.getText());
@@ -176,11 +176,11 @@ public class BinGUIFrame extends JFrame {
 
             toggleButton.setIcon(binaryIcon);
 
-            System.out.println(new DynamicBinary(Integer.parseInt(output.getText())));
+            System.out.println(new CompactBinary(Integer.parseInt(output.getText())));
 
             // Output was an integer, now input becomes the integer.
             if (outputText.matches("\\d+"))
-                input.setText(new DynamicBinary(Integer.parseInt(outputText)).toInt() + "");
+                input.setText(new CompactBinary(Integer.parseInt(outputText)).toInt() + "");
         }
 
         inputLabel.grabFocus();
@@ -191,7 +191,7 @@ public class BinGUIFrame extends JFrame {
         if (state == GUIState.BIN_TO_DEC) {
             String inputText = input.getText();
             if (!inputText.equals("") && Binary.isValid(inputText)) {
-                Binary binary = new DynamicBinary(inputText);
+                Binary binary = new CompactBinary(inputText);
                 output.setText(binary.toLong() + "");
             }
         }
@@ -199,7 +199,7 @@ public class BinGUIFrame extends JFrame {
             if (input.getText().matches("\\d+")) {
                 int inputInt = Integer.parseInt(input.getText());
 
-                Binary binary = new DynamicBinary(inputInt);
+                Binary binary = new CompactBinary(inputInt);
                 output.setText(binary.toString());
             }
         }

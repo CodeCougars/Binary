@@ -57,5 +57,7 @@ public class Main {
         catch (Error err) {
             System.out.println(err);
         }
+
+        Binary.binaryThings();
     }
 }
